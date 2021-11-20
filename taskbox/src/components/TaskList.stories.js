@@ -1,17 +1,18 @@
 import React from 'react';
 
-import TaskList from './TaskList';
+import { PureTaskList } from './TaskList';
 import * as TaskStories from './Task.stories';
 
 export default {
-  component: TaskList,
+  component: PureTaskList,
   title: 'TaskList',
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
-const Template = args => <TaskList {...args} />;
+const Template = args => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
   // Shaping the stories through args composition.
   // The data was inherited from the Default story in task.stories.js.
